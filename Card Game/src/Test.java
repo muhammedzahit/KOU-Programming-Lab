@@ -5,7 +5,7 @@ import java.util.Random;
 public class Test {
     // pozisyon sec fonksiyonu yaz !!!
 
-    static Kullanici kullanıcı;
+    static Kullanici kullanici;
     static Bilgisayar bilgisayar;
     static boolean futbolcu_modu;
     static List<String> kullanici_kart_isimleri;
@@ -38,7 +38,7 @@ public class Test {
 
     Test(){
 
-        kullanıcı = new Kullanici();
+        kullanici = new Kullanici();
         bilgisayar = new Bilgisayar();
         futbolcu_modu = true;
         kullanici_kart_isimleri = new ArrayList<String>();
@@ -55,49 +55,49 @@ public class Test {
         // PENALTI - SERBEST VURUS - KALECI
         Object obj1 = new Futbolcu("Mbappe", "PSG", 90, 90, 90);
         if (liste.indexOf(1) < 4)
-            kullanıcı.kartListesi.add(obj1);
+            kullanici.kartListesi.add(obj1);
         else
             bilgisayar.kartListesi.add(obj1);
 
         Object obj2 = new Futbolcu("Kane","Tottenham", 85, 75, 90);
         if (liste.indexOf(2) < 4)
-            kullanıcı.kartListesi.add(obj2);
+            kullanici.kartListesi.add(obj2);
         else
             bilgisayar.kartListesi.add(obj2);
 
         Object obj3 = new Futbolcu("Neymar", "PSG", 100, 90, 95);
         if (liste.indexOf(3) < 4)
-            kullanıcı.kartListesi.add(obj3);
+            kullanici.kartListesi.add(obj3);
         else
             bilgisayar.kartListesi.add(obj3);
 
         Object obj4 = new Futbolcu("Salah","Liverpool", 95, 95, 95);
         if (liste.indexOf(4) < 4)
-            kullanıcı.kartListesi.add(obj4);
+            kullanici.kartListesi.add(obj4);
         else
             bilgisayar.kartListesi.add(obj4);
 
         Object obj5 = new Futbolcu("Ronaldo","Juventus", 100, 100, 95);
         if (liste.indexOf(5) < 4)
-            kullanıcı.kartListesi.add(obj5);
+            kullanici.kartListesi.add(obj5);
         else
             bilgisayar.kartListesi.add(obj5);
         Object obj6 = new Futbolcu("Messi","Barcelona", 100, 95, 100);
 
         if (liste.indexOf(6) < 4)
-            kullanıcı.kartListesi.add(obj6);
+            kullanici.kartListesi.add(obj6);
         else
             bilgisayar.kartListesi.add(obj6);
 
         Object obj7 = new Futbolcu("Coutinho","Barcelona",80, 85, 95);
         if (liste.indexOf(7) < 4)
-            kullanıcı.kartListesi.add(obj7);
+            kullanici.kartListesi.add(obj7);
         else
             bilgisayar.kartListesi.add(obj7);
 
         Object obj8 = new Futbolcu("Sterling","M.City", 90, 90, 85);
         if (liste.indexOf(8) < 4)
-            kullanıcı.kartListesi.add(obj8);
+            kullanici.kartListesi.add(obj8);
         else
             bilgisayar.kartListesi.add(obj8);
 
@@ -109,49 +109,49 @@ public class Test {
 
         obj1 = new Basketbolcu("George", "Clippers", 90, 90, 90);
         if (liste.indexOf(1) < 4)
-            kullanıcı.kartListesi.add(obj1);
+            kullanici.kartListesi.add(obj1);
         else
             bilgisayar.kartListesi.add(obj1);
 
         obj2 = new Basketbolcu("Harden","Rockets", 85, 75, 90);
         if (liste.indexOf(2) < 4)
-            kullanıcı.kartListesi.add(obj2);
+            kullanici.kartListesi.add(obj2);
         else
             bilgisayar.kartListesi.add(obj2);
 
         obj3 = new Basketbolcu("Durant", "Nets", 100, 90, 95);
         if (liste.indexOf(3) < 4)
-            kullanıcı.kartListesi.add(obj3);
+            kullanici.kartListesi.add(obj3);
         else
             bilgisayar.kartListesi.add(obj3);
 
         obj4 = new Basketbolcu("Leonard","Clippers", 95, 95, 95);
         if (liste.indexOf(4) < 4)
-            kullanıcı.kartListesi.add(obj4);
+            kullanici.kartListesi.add(obj4);
         else
             bilgisayar.kartListesi.add(obj4);
 
         obj5 = new Basketbolcu("James","Lakers", 100, 100, 95);
         if (liste.indexOf(5) < 4)
-            kullanıcı.kartListesi.add(obj5);
+            kullanici.kartListesi.add(obj5);
         else
             bilgisayar.kartListesi.add(obj5);
         obj6 = new Basketbolcu("Curry","GSW", 100, 95, 100);
 
         if (liste.indexOf(6) < 4)
-            kullanıcı.kartListesi.add(obj6);
+            kullanici.kartListesi.add(obj6);
         else
             bilgisayar.kartListesi.add(obj6);
 
         obj7 = new Basketbolcu("Irving","Nets",80, 85, 95);
         if (liste.indexOf(7) < 4)
-            kullanıcı.kartListesi.add(obj7);
+            kullanici.kartListesi.add(obj7);
         else
             bilgisayar.kartListesi.add(obj7);
 
         obj8 = new Basketbolcu("Doncic","Dallas", 90, 90, 85);
         if (liste.indexOf(8) < 4)
-            kullanıcı.kartListesi.add(obj8);
+            kullanici.kartListesi.add(obj8);
         else
             bilgisayar.kartListesi.add(obj8);
 

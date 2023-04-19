@@ -31,43 +31,43 @@ public class Main extends Application {
         ImageView kullanici_resim_8 = (ImageView) root.getScene().lookup("#kullanici_resim_8");
 
 
-        Futbolcu f1 = (Futbolcu) Test.kullanıcı.kartListesi.get(0);
+        Futbolcu f1 = (Futbolcu) Test.kullanici.kartListesi.get(0);
         Test.kullanici_kart_isimleri.add(f1.getFutbolcuAdi());
         Basketbolcu b1;
         String path = "images/"+f1.getFutbolcuAdi()+".png";
         kullanici_resim_1.setImage(new Image(new FileInputStream(path)));
         // , 171, 242, false, false
-        f1 = (Futbolcu) Test.kullanıcı.kartListesi.get(1);
+        f1 = (Futbolcu) Test.kullanici.kartListesi.get(1);
         path = "images/"+f1.getFutbolcuAdi()+".png";
         kullanici_resim_2.setImage(new Image(new FileInputStream(path), 150, 200, false, false));
         Test.kullanici_kart_isimleri.add(f1.getFutbolcuAdi());
 
-        f1 = (Futbolcu) Test.kullanıcı.kartListesi.get(2);
+        f1 = (Futbolcu) Test.kullanici.kartListesi.get(2);
         path = "images/"+f1.getFutbolcuAdi()+".png";
         kullanici_resim_3.setImage(new Image(new FileInputStream(path), 150, 200, false, false));
         Test.kullanici_kart_isimleri.add(f1.getFutbolcuAdi());
 
-        f1 = (Futbolcu) Test.kullanıcı.kartListesi.get(3);
+        f1 = (Futbolcu) Test.kullanici.kartListesi.get(3);
         path = "images/"+f1.getFutbolcuAdi()+".png";
         kullanici_resim_4.setImage(new Image(new FileInputStream(path),150, 200, false, false));
         Test.kullanici_kart_isimleri.add(f1.getFutbolcuAdi());
 
-        b1 = (Basketbolcu) Test.kullanıcı.kartListesi.get(4);
+        b1 = (Basketbolcu) Test.kullanici.kartListesi.get(4);
         path = "images/"+b1.getBasketbolcuAdi()+".png";
         kullanici_resim_5.setImage(new Image(new FileInputStream(path),150, 200, false, false));
         Test.kullanici_kart_isimleri.add(b1.getBasketbolcuAdi());
 
-        b1 = (Basketbolcu) Test.kullanıcı.kartListesi.get(5);
+        b1 = (Basketbolcu) Test.kullanici.kartListesi.get(5);
         path = "images/"+b1.getBasketbolcuAdi()+".png";
         kullanici_resim_6.setImage(new Image(new FileInputStream(path),150, 200, false, false));
         Test.kullanici_kart_isimleri.add(b1.getBasketbolcuAdi());
 
-        b1 = (Basketbolcu) Test.kullanıcı.kartListesi.get(6);
+        b1 = (Basketbolcu) Test.kullanici.kartListesi.get(6);
         path = "images/"+b1.getBasketbolcuAdi()+".png";
         kullanici_resim_7.setImage(new Image(new FileInputStream(path),150, 200, false, false));
         Test.kullanici_kart_isimleri.add(b1.getBasketbolcuAdi());
 
-        b1 = (Basketbolcu) Test.kullanıcı.kartListesi.get(7);
+        b1 = (Basketbolcu) Test.kullanici.kartListesi.get(7);
         path = "images/"+b1.getBasketbolcuAdi()+".png";
         kullanici_resim_8.setImage(new Image(new FileInputStream(path),150, 200, false, false));
         Test.kullanici_kart_isimleri.add(b1.getBasketbolcuAdi());

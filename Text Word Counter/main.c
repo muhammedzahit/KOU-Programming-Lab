@@ -55,8 +55,8 @@ void to_upper(char array[]){
 
 int main()
 {
-    FILE *file = fopen("D://file.txt", "r");
-    FILE *file2 = fopen("D://cikti.txt", "w");
+    FILE *file = fopen("./file.txt", "r");
+    FILE *file2 = fopen("./cikti.txt", "w");
     char gecici[100];
 
     if (!file)

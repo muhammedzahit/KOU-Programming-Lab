@@ -19,7 +19,7 @@ void menuYaz(){
 }
 
 void int_to_char(char text[],int yazdirilacak){
-    int k = 0; // verilen char dizisinin hangi index'ine atama yapılacağını yönetir.
+    int k = 0; // verilen char dizisinin hangi index'ine atama yapÄ±lacaÄŸÄ±nÄ± yÃ¶netir.
     if (yazdirilacak < 0){
         text[0] = '-';
         k += 1;
@@ -35,13 +35,13 @@ void int_to_char(char text[],int yazdirilacak){
 }
 
 void nokta_duzenle(int *x, int *y, int ekran_x, int ekran_y, int genislik){
-    int birim_genislik = ekran_x / (genislik*2); // koordinat sistemindeki birim karenin bir kenar uzunluğunun grafik ekranındaki karşılığı
+    int birim_genislik = ekran_x / (genislik*2); // koordinat sistemindeki birim karenin bir kenar uzunluÄŸunun grafik ekranÄ±ndaki karÅŸÄ±lÄ±ÄŸÄ±
     *x = (ekran_x/2) + (birim_genislik * (*x));
     *y = (ekran_y/2) - (birim_genislik * (*y));
 }
 
 void cember_bilgileri_yaz(Cember* cember,int ekran_x, int ekran_y, int genislik){
-    // bu fonksiyon grafik ekranındaki çemberin bilgilerini koordinat sistemi formuna çevirir.
+    // bu fonksiyon grafik ekranÄ±ndaki Ã§emberin bilgilerini koordinat sistemi formuna Ã§evirir.
     int birim_genislik = ekran_x / (genislik*2);
     double x = (cember->merkez_x - (ekran_x/2)) / birim_genislik;
     double y = ekran_y - cember->merkez_y;
@@ -53,14 +53,14 @@ void cember_bilgileri_yaz(Cember* cember,int ekran_x, int ekran_y, int genislik)
 }
 
 void noktalari_duzenle(int noktalar[], int uzunluk, int ekran_x, int ekran_y, int genislik){
-    // verilen noktaları grafik ekranındaki koordinat sistemine göre düzenler.
+    // verilen noktalarÄ± grafik ekranÄ±ndaki koordinat sistemine gÃ¶re dÃ¼zenler.
     for (int i=0; i<uzunluk; i+=2){
         nokta_duzenle(&noktalar[i],&noktalar[i+1], ekran_x, ekran_y , genislik);
     }
 }
 
 void noktalari_yazdir(int noktalar[], int uzunluk){
-    // noktalari grafik ekranında gösterir.
+    // noktalari grafik ekranÄ±nda gÃ¶sterir.
     for (int i=0; i<uzunluk; i+=2){
         fillellipse(noktalar[i], noktalar[i+1], 4, 4);
     }
@@ -98,7 +98,7 @@ double mesafe_hesapla(double nokta1_x, double nokta1_y,double nokta2_x, double n
 }
 
 int icinde_mi(Cember* cember, double x, double y){
-    // verilen noktanin çemberin içinde veya üstünde olup olmadığını kontrol eder.
+    // verilen noktanin Ã§emberin iÃ§inde veya Ã¼stÃ¼nde olup olmadÄ±ÄŸÄ±nÄ± kontrol eder.
     if (mesafe_hesapla(cember->merkez_x, cember->merkez_y, x, y) <= cember->yaricap){
         return 1;
     }
@@ -106,14 +106,14 @@ int icinde_mi(Cember* cember, double x, double y){
 }
 
 void merkez_hesapla(Cember *cember,int nokta1_x, int nokta1_y,int nokta2_x, int nokta2_y){
-    // gönderilen iki noktaya göre çemberin en merkezini ve yarıçapını hesaplar.
+    // gÃ¶nderilen iki noktaya gÃ¶re Ã§emberin en merkezini ve yarÄ±Ã§apÄ±nÄ± hesaplar.
     cember->merkez_x = (nokta1_x + nokta2_x) / 2.0;
     cember->merkez_y = (nokta1_y + nokta2_y) / 2.0;
     cember->yaricap = mesafe_hesapla(cember->merkez_x, cember->merkez_y, nokta1_x, nokta1_y);
 }
 
 void merkez_hesapla(Cember* cember, double nokta_1x, double nokta_1y,double nokta_2x, double nokta_2y,double nokta_3x, double nokta_3y){
-    // gönderilen üç noktaya göre çemberin merkezini ve yarıçapını hesaplar.
+    // gÃ¶nderilen Ã¼Ã§ noktaya gÃ¶re Ã§emberin merkezini ve yarÄ±Ã§apÄ±nÄ± hesaplar.
     double yardimci_1x,yardimci_1y,yardimci_2x,yardimci_2y;
 
     yardimci_1x = nokta_2x - nokta_1x;
@@ -133,7 +133,7 @@ void merkez_hesapla(Cember* cember, double nokta_1x, double nokta_1y,double nokt
 }
 
 void cember_hesapla(Cember* cember, double nokta1_x, double nokta1_y,double nokta2_x, double nokta2_y,double nokta3_x, double nokta3_y){
-    // verilen üç noktaya göre en küçük çemberi hesaplar.
+    // verilen Ã¼Ã§ noktaya gÃ¶re en kÃ¼Ã§Ã¼k Ã§emberi hesaplar.
     merkez_hesapla(cember,  nokta1_x,  nokta1_y, nokta2_x,  nokta2_y);
     if (icinde_mi(cember, nokta3_x, nokta3_y)){
         return;
@@ -153,7 +153,7 @@ void cember_hesapla(Cember* cember, double nokta1_x, double nokta1_y,double nokt
 }
 
 void en_kucuk_cember_bul(Cember* cember,int noktalar[], int uzunluk){
-    // en küçük çevreleyen çemberi bulur.
+    // en kÃ¼Ã§Ã¼k Ã§evreleyen Ã§emberi bulur.
     cember->yaricap = INT_MAX;
     for(int i=0; i<=uzunluk-4; i+=2){
         for (int j=i+2; j<=uzunluk-2 ; j+=2){
@@ -180,7 +180,7 @@ void en_kucuk_cember_bul(Cember* cember,int noktalar[], int uzunluk){
 }
 
 void egri_hesapla(double yeni_nokta[],int noktalar[],double katsayi){
-    // noktalardan geçen eğrinin üzerindeki noktaları hesaplar.
+    // noktalardan geÃ§en eÄŸrinin Ã¼zerindeki noktalarÄ± hesaplar.
     int nokta1, nokta2, nokta3, nokta4;
     nokta2 = int(katsayi) + 1;
     nokta3 = nokta2 + 1;
@@ -198,7 +198,7 @@ void egri_hesapla(double yeni_nokta[],int noktalar[],double katsayi){
 }
 
 void egri_ciz(int noktalar[], int uzunluk, int ekran_x, int ekran_y){
-    // noktalardan geçen eğriyi çizer.
+    // noktalardan geÃ§en eÄŸriyi Ã§izer.
     int nokta_sayisi = uzunluk/2;
     int noktalar2[uzunluk+4];
     noktalar2[0] = 0;
@@ -221,7 +221,7 @@ void egri_ciz(int noktalar[], int uzunluk, int ekran_x, int ekran_y){
 }
 
 void en_uzak_noktalar(int noktalar[], int uzunluk, int uzak_noktalar[]){
-    // noktalar arasından birbirine en uzak iki noktayı hesaplar.
+    // noktalar arasÄ±ndan birbirine en uzak iki noktayÄ± hesaplar.
     double mesafe = -1;
     for (int i=0; i<uzunluk-2; i+=2){
         for(int j=i+2; j<uzunluk; j+=2){
@@ -236,7 +236,7 @@ void en_uzak_noktalar(int noktalar[], int uzunluk, int uzak_noktalar[]){
 }
 
 void cember_kontrol(Cember* cember, int noktalar[], int uzunluk){
-    // 3 nokta ile çember bulma yönteminin istisnalarını kontrol eder.
+    // 3 nokta ile Ã§ember bulma yÃ¶nteminin istisnalarÄ±nÄ± kontrol eder.
     int uzak_noktalar[2];
     en_uzak_noktalar(noktalar, uzunluk, uzak_noktalar);
     Cember cember2;
@@ -260,14 +260,14 @@ void cember_kontrol(Cember* cember, int noktalar[], int uzunluk){
 }
 
 void degistir(int* x, int* y){
-    // iki değişkenin değerini adresleri yardımıyla değiştirir.
+    // iki deÄŸiÅŸkenin deÄŸerini adresleri yardÄ±mÄ±yla deÄŸiÅŸtirir.
     int gecici = *x;
     *x = *y;
     *y = gecici;
 }
 
 void sirala(int noktalar[], int uzunluk){
-    // bubble sort sıralaması kullanarak noktaları x değerlerine göre sıralar.
+    // bubble sort sÄ±ralamasÄ± kullanarak noktalarÄ± x deÄŸerlerine gÃ¶re sÄ±ralar.
     for (int i=0; i<uzunluk-2; i+=2){
         for(int j=0; j<uzunluk-i-2; j+=2){
             if (noktalar[j] > noktalar[j+2]){
@@ -280,15 +280,15 @@ void sirala(int noktalar[], int uzunluk){
 
 int main()
 {
-    // dosya okuma işlemleri
+    // dosya okuma iÅŸlemleri
     FILE* file;
-    file = fopen("C:\\a.txt","r");
+    file = fopen("./a.txt","r");
     if (file == NULL){
         printf("Dosya acilamadi");
     }
     else{
         char array[200];
-        int i = 0; // kaçıncı indexte olduğunu belirtir.
+        int i = 0; // kaÃ§Ä±ncÄ± indexte olduÄŸunu belirtir.
         while(!feof(file)){
             fscanf(file,"%c",&array[i]);
             i++;
@@ -296,7 +296,7 @@ int main()
         array[i] = '\0';
 
         int noktalar[200];
-        int k = 0; // kaçıncı noktada olduğunu belirtir.
+        int k = 0; // kaÃ§Ä±ncÄ± noktada olduÄŸunu belirtir.
         for(int i=0; i<200; i++){
             if (array[i] == '\0'){
                 break;
@@ -307,7 +307,7 @@ int main()
                     noktalar[k] *= -1;
                 }
                 k++;
-                i++; // iki karakter okuduğumuz için i 1 arttırıldı.
+                i++; // iki karakter okuduÄŸumuz iÃ§in i 1 arttÄ±rÄ±ldÄ±.
             }
             else if (isdigit(array[i])){
                 noktalar[k] = array[i] - '0';
@@ -317,11 +317,11 @@ int main()
                 k++;
             }
         }
-        int uzunluk = k; // noktalar dizisinin uzunluğu
+        int uzunluk = k; // noktalar dizisinin uzunluÄŸu
         int ekran_x = 640;
         int ekran_y = 640;
-        int genislik = 20; // grafik ekranına çizilecek koordinat sisteminin genişliği
-        // 20 değeri (-20,20) aralığını belirtir.
+        int genislik = 20; // grafik ekranÄ±na Ã§izilecek koordinat sisteminin geniÅŸliÄŸi
+        // 20 deÄŸeri (-20,20) aralÄ±ÄŸÄ±nÄ± belirtir.
         sirala(noktalar, uzunluk);
         noktalari_duzenle(noktalar, uzunluk, ekran_x, ekran_y, genislik);
         int calistir = -1;
@@ -335,7 +335,7 @@ int main()
             case 1:
                 koordinat_sistemi_ciz(ekran_x,ekran_y,genislik);
                 noktalari_yazdir(noktalar, uzunluk);
-                system("cls"); // konsol ekranını temizler.
+                system("cls"); // konsol ekranÄ±nÄ± temizler.
                 break;
             case 2:
                 koordinat_sistemi_ciz(ekran_x,ekran_y,genislik);
@@ -344,7 +344,7 @@ int main()
                 en_kucuk_cember_bul(&cember, noktalar, uzunluk);
                 cember_kontrol(&cember, noktalar, uzunluk);
                 circle(cember.merkez_x, cember.merkez_y, cember.yaricap);
-                // merkezi ve yaricapi göster
+                // merkezi ve yaricapi gÃ¶ster
                 setcolor(MAGENTA);
                 fillellipse(cember.merkez_x, cember.merkez_y, 5, 5);
                 char yaricap[20];
@@ -358,19 +358,19 @@ int main()
                 outtextxy(cember.merkez_x+6, cember.merkez_y, yaricap2);
                 setcolor(MAGENTA);
                 //
-                system("cls");  // konsol ekranını temizler.
+                system("cls");  // konsol ekranÄ±nÄ± temizler.
                 cember_bilgileri_yaz(&cember, ekran_x, ekran_y, genislik);
                 break;
             case 3:
                 koordinat_sistemi_ciz(ekran_x,ekran_y,genislik);
                 noktalari_yazdir(noktalar, uzunluk);
                 egri_ciz(noktalar, uzunluk, ekran_x, ekran_y);
-                system("cls");  // konsol ekranını temizler.
+                system("cls");  // konsol ekranÄ±nÄ± temizler.
                 break;
             case 9:
                 break;
             default:
-                system("cls");  // konsol ekranını temizler.
+                system("cls");  // konsol ekranÄ±nÄ± temizler.
                 printf("Yanlis secim yaptiniz!!! Lutfen gecerli bir secim yapiniz\n");
             }
         }

@@ -1,0 +1,34 @@
+<h2>
+
+Kocaeli Üniversitesi Programlama Labaratuvarı bünyesinde yaptığım projeler:
+
+</h2>
+
+<ol>
+  <li>
+  <a href = '#jafafx-card-game'>JavaFx Card Game</a>
+  </li>
+</ol>
+
+## JavaFX Card Game
+
+<h5> 
+JavaFx kütüphanesi ile hazırlanmış bir kart oyunu projesi. Oyun içerisinde iki mod bulunmakta. İlk mod Futbolcu kartları için hazırlanmıştır. İkinci mod ise Basketbolcu kartları için hazırlanmıştır.Oyunun hangi modda olduğu arkaplan görseline bakarak karar verebilirsiniz. Oyun içerisinde oyuncuların kartları karşılaştırılarak kazanıp kaybetmeleri sağlanmıştır. Oyunun amacı oyuncuların kartlarını bitirmek ve rakibini yenmek. Oyunun sonunda kazanan oyuncu ekrana yazdırılmaktadır.
+</h5>
+
+<h5>
+Oyun Görselleri:
+</h5>
+
+Görsel 1:
+![plot](./images/javafxcardgame1.png)
+
+Görsel 2:
+![plot](./images/javafx-card-game-2.png)
+
+Görsel 3:
+![plot](./images/javafx-card-game-3.png)
+
+Görsel 4:
+![plot](./images/javafx-card-game-4.png)
+
